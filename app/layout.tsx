@@ -1,13 +1,15 @@
-// app/layout.tsx
 import "../styles/globals.css";
-import { ReactNode } from "react";
 
 export const metadata = {
   title: "Gamble Site",
-  description: "Just a sample gambling-style website",
+  description: "Landing page with Tailwind + Next.js",
 };
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <body>{children}</body>
