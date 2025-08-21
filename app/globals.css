@@ -3,6 +3,18 @@
 @tailwind utilities;
 
 body {
-  @apply bg-gray-900 text-white;
   font-family: sans-serif;
+  background: black;
+  margin: 0;
+  padding: 0;
+}
+
+/* Wheel animation reset */
+#wheel {
+  transition: transform 4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Glow effect */
+button {
+  box-shadow: 0 0 20px rgba(0, 255, 100, 0.5);
 }
