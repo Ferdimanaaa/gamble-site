@@ -1,18 +1,14 @@
-import "../styles/globals.css";
+import "./globals.css";
 
 export const metadata = {
-  title: "Gamble Site",
-  description: "Landing page with Tailwind + Next.js",
+  title: "Spin Wheel MemeCoin",
+  description: "Fun spin game for MemeCoin fans 🚀",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="bg-gray-900 text-white">{children}</body>
     </html>
   );
 }
