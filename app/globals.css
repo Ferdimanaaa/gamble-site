@@ -2,19 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ====== Animated gradient bg (crypto vibe) ====== */
+html, body {
+  height: 100%;
+}
 body {
-  font-family: sans-serif;
-  background: black;
   margin: 0;
-  padding: 0;
+  color: white;
+  background: linear-gradient(120deg, #0f172a, #111827, #1e293b, #0b132b);
+  background-size: 300% 300%;
+  animation: gradientShift 16s ease infinite;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-/* Wheel animation reset */
-#wheel {
+/* ====== Wheel visual (conic-gradient slices) ====== */
+.wheel {
+  /* 8 slices, warna selang-seling */
+  background:
+    conic-gradient(
+      #4ade80 0deg 45deg,
+      #60a5fa 45deg 90deg,
+      #f97316 90deg 135deg,
+      #f43f5e 135deg 180deg,
+      #a78bfa 180deg 225deg,
+      #22d3ee 225deg 270deg,
+      #facc15 270deg 315deg,
+      #ef4444 315deg 360deg
+    );
   transition: transform 4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-/* Glow effect */
-button {
-  box-shadow: 0 0 20px rgba(0, 255, 100, 0.5);
+/* ====== Whale animations ====== */
+@keyframes whalePop {
+  0% { transform: scale(0.6) translateY(20px); opacity: 0; }
+  60% { transform: scale(1.1) translateY(-6px); opacity: 1; }
+  100% { transform: scale(1) translateY(0); opacity: 1; }
 }
+@keyframes whaleShake {
+  0%,100% { transform: translateX(0) rotate(0); }
+  20% { transform: translateX(-6px) rotate(-4deg); }
+  40% { transform: translateX(6px) rotate(4deg); }
+  60% { transform: translateX(-4px) rotate(-3deg); }
+  80% { transform: translateX(4px) rotate(3deg); }
+}
+.animate-whale-pop { animation: whalePop 500ms ease-out both; }
+.animate-whale-shake { animation: whaleShake 650ms ease-in-out both; }
