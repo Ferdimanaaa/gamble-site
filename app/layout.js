@@ -1,8 +1,9 @@
-import './globals.css';
+import "./globals.css";
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-transparent">{children}</body>
+      <body className="min-h-screen antialiased">{children}</body>
     </html>
   );
 }
