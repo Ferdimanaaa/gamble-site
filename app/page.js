@@ -260,12 +260,6 @@ export default function Home() {
           >
             🚀 Pump.fun
           </a>
-          <a
-            href="https://dexscreener.com"
-            target="_blank"
-            className="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 transition"
-          >
-          </a>
         </div>
       </main>
     </div>
